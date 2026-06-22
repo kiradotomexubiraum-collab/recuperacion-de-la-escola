@@ -411,10 +411,10 @@ function validarCampo(campoId) {
 
   if (campoId === 'tipoConteudo') {
     if (valor === '') {
-      mostrarErro('tipo', 'Selecione o tipo de conteúdo.');
+      mostrarErro('tipoConteudo', 'Selecione o tipo de conteúdo.');
       return false;
     }
-    limparErro('tipo');
+    limparErro('tipoConteudo');
     return true;
   }
 
