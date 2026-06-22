@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site educativo sobre deepfakes, desinformação e cidadania digital. Aprenda a identificar mídias manipuladas por IA." />
+  <title>Deepfakes &amp; IA — Cidadania Digital 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVEGAÇÃO ========== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#inicio" class="nav-logo" aria-label="Início">
+        <span class="logo-icon" aria-hidden="true">⬡</span>
+        <span>CidadaniaDigital<strong>2026</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#deepfakes" class="nav-link">Deepfakes</a></li>
+        <li><a href="#fake-news" class="nav-link">Fake News</a></li>
+        <li><a href="#identificar" class="nav-link">Como Identificar</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#praticas" class="nav-link">Boas Práticas</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+      <button class="dark-toggle" id="darkToggle" aria-label="Alternar modo escuro" title="Modo escuro">
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Cidadania Digital &amp; Inteligência Artificial</p>
+        <h1 class="hero-title" id="heroTitle">
+          Você consegue<br />
+          <span class="title-highlight">identificar uma deepfake?</span>
+        </h1>
+        <p class="hero-body">
+          A IA pode criar rostos, vozes e vídeos que nunca existiram. Entenda como funciona essa tecnologia, 
+          os riscos da desinformação automatizada e como proteger a sua realidade digital.
+        </p>
+        <div class="hero-cta">
+          <a href="#deepfakes" class="btn btn-primary">Entender os riscos</a>
+          <a href="#quiz" class="btn btn-outline">Fazer o quiz</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="scan-wrapper">
+          <div class="face-placeholder">
+            <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="face-svg">
+              <!-- Cabeça -->
+              <ellipse cx="100" cy="90" rx="58" ry="68" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+              <!-- Olhos -->
+              <ellipse cx="78" cy="80" rx="10" ry="7" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <ellipse cx="122" cy="80" rx="10" ry="7" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <!-- Pupilas -->
+              <circle cx="78" cy="80" r="4" fill="currentColor" opacity="0.4"/>
+              <circle cx="122" cy="80" r="4" fill="currentColor" opacity="0.4"/>
+              <!-- Nariz -->
+              <path d="M100 90 L94 108 Q100 113 106 108 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <!-- Boca -->
+              <path d="M83 122 Q100 134 117 122" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+              <!-- Pontos de rastreamento facial -->
+              <circle cx="100" cy="26" r="3" fill="#FFB300" opacity="0.8"/>
+              <circle cx="48" cy="68" r="3" fill="#FFB300" opacity="0.8"/>
+              <circle cx="152" cy="68" r="3" fill="#FFB300" opacity="0.8"/>
+              <circle cx="62" cy="148" r="3" fill="#FFB300" opacity="0.8"/>
+              <circle cx="138" cy="148" r="3" fill="#FFB300" opacity="0.8"/>
+              <circle cx="100" cy="158" r="3" fill="#FFB300" opacity="0.8"/>
+              <!-- Linhas de malha -->
+              <line x1="100" y1="26" x2="48" y2="68" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="100" y1="26" x2="152" y2="68" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="48" y1="68" x2="152" y2="68" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="48" y1="68" x2="62" y2="148" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="152" y1="68" x2="138" y2="148" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="62" y1="148" x2="138" y2="148" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="62" y1="148" x2="100" y2="158" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="138" y1="148" x2="100" y2="158" stroke="#0057FF" stroke-width="0.8" opacity="0.3"/>
+              <!-- Texto de análise -->
+              <text x="10" y="195" font-family="monospace" font-size="9" fill="#0057FF" opacity="0.7">ANALISANDO...</text>
+              <text x="10" y="207" font-family="monospace" font-size="9" fill="#FFB300" opacity="0.7">IA DETECTADA</text>
+            </svg>
+            <div class="scan-line" aria-hidden="true"></div>
+          </div>
+          <div class="scan-label">Detecção de deepfake ativa</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALERTA ESTATÍSTICAS ========== -->
+    <section class="stats-bar" aria-label="Estatísticas sobre desinformação">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num">96%</span>
+            <span class="stat-label">das deepfakes são vídeos não-consensuais de pessoas reais</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">5x</span>
+            <span class="stat-label">mais rápido: fake news se espalham mais que a verdade nas redes</span>
+          </div>
+          <div class="stat-num-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num">500h</span>
+            <span class="stat-label">de vídeo são enviados ao YouTube por minuto — difícil verificar tudo</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">2026</span>
+            <span class="stat-label">ano em que deepfakes são geradas em segundos por qualquer pessoa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== O QUE SÃO DEEPFAKES ========== -->
+    <section class="section" id="deepfakes" aria-labelledby="deepfakesTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Entenda o problema</span>
+          <h2 class="section-title" id="deepfakesTitle">O que são Deepfakes?</h2>
+        </div>
+        <div class="two-col">
+          <div class="col-text">
+            <p>
+              <strong>Deepfake</strong> é uma palavra que combina <em>deep learning</em> (aprendizado profundo, um tipo de IA) 
+              com <em>fake</em> (falso). É uma tecnologia que usa redes neurais artificiais para criar 
+              imagens, vídeos e áudios falsos extremamente realistas de pessoas reais.
+            </p>
+            <p>
+              Softwares de IA conseguem analisar centenas de fotos de uma pessoa e recriar seu rosto 
+              em outro vídeo, sincronizando movimentos labiais, expressões e até a voz. O resultado 
+              pode ser difícil de distinguir do conteúdo verdadeiro a olho nu.
+            </p>
+            <p>
+              Embora existam usos legítimos — como efeitos especiais no cinema — a maioria das deepfakes 
+              é criada com intenções prejudiciais: difamar pessoas, criar desinformação política ou 
+              gerar conteúdo abusivo sem consentimento.
+            </p>
+          </div>
+          <div class="col-cards">
+            <div class="info-card card-danger">
+              <span class="card-icon" aria-hidden="true">⚠️</span>
+              <h3>Deepfakes Políticas</h3>
+              <p>Vídeos falsos de líderes políticos fazendo declarações que nunca fizeram podem influenciar eleições e provocar crises diplomáticas.</p>
+            </div>
+            <div class="info-card card-warning">
+              <span class="card-icon" aria-hidden="true">🎭</span>
+              <h3>Fraude de Identidade</h3>
+              <p>Criminosos usam deepfakes para se passar por executivos em videochamadas e autorizar transferências financeiras milionárias.</p>
+            </div>
+            <div class="info-card card-info">
+              <span class="card-icon" aria-hidden="true">📢</span>
+              <h3>Manipulação Social</h3>
+              <p>Rostos e vozes conhecidos são usados para promover golpes, produtos falsos e ideologias sem o conhecimento dessas pessoas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAKE NEWS AUTOMATIZADAS ========== -->
+    <section class="section section-dark" id="fake-news" aria-labelledby="fakeNewsTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">O papel da IA</span>
+          <h2 class="section-title" id="fakeNewsTitle">Fake News Automatizadas</h2>
+        </div>
+        <p class="section-lead">
+          A inteligência artificial não só manipula imagens — ela também <strong>escreve notícias falsas</strong> em escala industrial.
+        </p>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <h3>Geração de Conteúdo</h3>
+            <p>IAs generativas criam artigos, posts e notícias falsas em segundos, com linguagem convincente e sem erros gramaticais.</p>
+          </div>
+          <div class="process-arrow" aria-hidden="true">→</div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <h3>Amplificação</h3>
+            <p>Redes de bots automatizados compartilham o conteúdo falso milhares de vezes, criando a ilusão de que muitas pessoas acreditam naquilo.</p>
+          </div>
+          <div class="process-arrow" aria-hidden="true">→</div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <h3>Viralização</h3>
+            <p>Algoritmos das redes sociais priorizam conteúdo que gera engajamento emocional — o medo e a raiva das fake news funcionam a seu favor.</p>
+          </div>
+          <div class="process-arrow" aria-hidden="true">→</div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <h3>Dano Real</h3>
+            <p>A desinformação causa dano antes que a correção apareça. Em saúde, política e relações pessoais, o estrago já está feito.</p>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <span class="highlight-icon" aria-hidden="true">💡</span>
+          <p><strong>Você sabia?</strong> Um estudo do MIT mostrou que notícias falsas chegam a 1.500 pessoas 6 vezes mais rápido do que notícias verdadeiras no Twitter. O conteúdo emocional e surpreendente é compartilhado muito mais do que informações verificadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMO IDENTIFICAR ========== -->
+    <section class="section" id="identificar" aria-labelledby="identificarTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Dicas práticas</span>
+          <h2 class="section-title" id="identificarTitle">Como Identificar Mídias Manipuladas</h2>
+        </div>
+        <div class="tips-grid">
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">👁️</span>
+              <h3>Olhe para os olhos</h3>
+            </div>
+            <p>Deepfakes frequentemente apresentam piscadas irregulares ou ausentes. Os olhos podem parecer vítreos, sem brilho natural, ou com reflexos de luz inconsistentes.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">🔍</span>
+              <h3>Observe as bordas</h3>
+            </div>
+            <p>Preste atenção nos contornos do cabelo, orelhas e pescoço. Deepfakes muitas vezes mostram artefatos visuais, borramento ou inconsistências nessas regiões.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">🎵</span>
+              <h3>Sincronismo de áudio</h3>
+            </div>
+            <p>Em vídeos deepfake, o movimento dos lábios nem sempre corresponde perfeitamente ao áudio. Preste atenção em sons que parecem "mecânicos" ou voz muito uniforme.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">📰</span>
+              <h3>Verifique a fonte</h3>
+            </div>
+            <p>Pesquise o veículo que publicou a notícia. Sites com URLs estranhas, sem "Sobre nós", sem contato ou criados recentemente são sinais de alerta imediato.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">🔎</span>
+              <h3>Busca reversa de imagem</h3>
+            </div>
+            <p>Use Google Imagens ou TinEye para fazer busca reversa de fotos suspeitas. A imagem pode ter sido tirada de outro contexto ou ser fabricada por IA.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">✅</span>
+              <h3>Consulte agências de checagem</h3>
+            </div>
+            <p>No Brasil: <strong>Agência Lupa</strong>, <strong>Aos Fatos</strong> e <strong>UOL Confere</strong> verificam notícias profissionalmente. Pesquise o tema nessas plataformas antes de compartilhar.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">⏸️</span>
+              <h3>Pause antes de compartilhar</h3>
+            </div>
+            <p>Quando um conteúdo provoca reação emocional forte — raiva, medo, indignação — desconfie. Esse gatilho emocional é a principal arma da desinformação.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-header">
+              <span class="tip-badge" aria-hidden="true">🛠️</span>
+              <h3>Use ferramentas de detecção</h3>
+            </div>
+            <p>Ferramentas como <strong>FakeCatcher</strong> (Intel), <strong>Deepware Scanner</strong> e detectores de metadados de IA podem ajudar a identificar conteúdo gerado artificialmente.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== QUIZ ========== -->
+    <section class="section section-quiz" id="quiz" aria-labelledby="quizTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Teste seus conhecimentos</span>
+          <h2 class="section-title" id="quizTitle">Quiz: Você está preparado?</h2>
+          <p class="section-subtitle">Responda 6 perguntas e descubra o quanto você sabe sobre deepfakes e fake news.</p>
+        </div>
+
+        <div class="quiz-container" id="quizContainer" role="main" aria-live="polite">
+          <!-- Conteúdo gerado pelo JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== BOAS PRÁTICAS ========== -->
+    <section class="section" id="praticas" aria-labelledby="praticasTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Segurança digital</span>
+          <h2 class="section-title" id="praticasTitle">Boas Práticas na Internet</h2>
+        </div>
+        <div class="practices-grid">
+          <div class="practice-group">
+            <h3 class="practice-group-title">🔐 Proteção de Dados</h3>
+            <ul class="practice-list">
+              <li>Use senhas únicas e longas para cada serviço</li>
+              <li>Ative a autenticação de dois fatores (2FA)</li>
+              <li>Revise as permissões de aplicativos regularmente</li>
+              <li>Não compartilhe informações pessoais em sites desconhecidos</li>
+              <li>Mantenha seu sistema operacional e apps atualizados</li>
+            </ul>
+          </div>
+          <div class="practice-group">
+            <h3 class="practice-group-title">📱 Comportamento Online</h3>
+            <ul class="practice-list">
+              <li>Verifique antes de compartilhar qualquer notícia</li>
+              <li>Questione conteúdos que provocam reações emocionais fortes</li>
+              <li>Não clique em links suspeitos, mesmo vindos de amigos</li>
+              <li>Configure sua privacidade nas redes sociais</li>
+              <li>Desconfie de promoções e prêmios inesperados</li>
+            </ul>
+          </div>
+          <div class="practice-group">
+            <h3 class="practice-group-title">🎓 Educação Midiática</h3>
+            <ul class="practice-list">
+              <li>Diversifique suas fontes de informação</li>
+              <li>Aprenda a identificar o viés de cada veículo de notícia</li>
+              <li>Converse com professores sobre conteúdos duvidosos</li>
+              <li>Denuncie desinformação nas plataformas onde encontrá-la</li>
+              <li>Compartilhe o conhecimento — ensine outros a verificar notícias</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FORMULÁRIO DE CONTATO ========== -->
+    <section class="section section-contact" id="contato" aria-labelledby="contatoTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fale conosco</span>
+          <h2 class="section-title" id="contatoTitle">Encontrou algo suspeito?</h2>
+          <p class="section-subtitle">Envie uma mensagem com a mídia suspeita. Ajudamos a analisar e orientar sobre o que fazer.</p>
+        </div>
+
+        <div class="form-wrapper">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="nomeError"
+                />
+                <span class="form-error" id="nomeError" role="alert" aria-live="assertive"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="emailError"
+                />
+                <span class="form-error" id="emailError" role="alert" aria-live="assertive"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tipoConteudo">Tipo de conteúdo suspeito <span aria-hidden="true">*</span></label>
+              <select id="tipoConteudo" name="tipoConteudo" required aria-required="true" aria-describedby="tipoError">
+                <option value="">Selecione uma opção...</option>
+                <option value="video">Vídeo deepfake</option>
+                <option value="imagem">Imagem manipulada</option>
+                <option value="audio">Áudio falso (voice clone)</option>
+                <option value="noticia">Notícia falsa (fake news)</option>
+                <option value="perfil">Perfil falso em rede social</option>
+                <option value="outro">Outro</option>
+              </select>
+              <span class="form-error" id="tipoError" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="link">Link ou descrição do conteúdo <span aria-hidden="true">*</span></label>
+              <textarea
+                id="link"
+                name="link"
+                rows="4"
+                placeholder="Cole o link ou descreva o conteúdo suspeito que encontrou..."
+                required
+                aria-required="true"
+                aria-describedby="linkError"
+              ></textarea>
+              <span class="form-error" id="linkError" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div class="form-group form-check">
+              <label class="checkbox-label">
+                <input type="checkbox" id="termos" name="termos" required aria-required="true" aria-describedby="termosError" />
+                <span>Li e entendi que este formulário é educativo e não substitui uma denúncia oficial às autoridades.</span>
+              </label>
+              <span class="form-error" id="termosError" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div id="formSuccess" class="form-success" aria-live="polite" hidden>
+              ✅ Mensagem enviada com sucesso! Obrigado por ajudar no combate à desinformação.
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-form">Enviar relato</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-icon" aria-hidden="true">⬡</span>
+          <p><strong>CidadaniaDigital2026</strong></p>
+          <p class="footer-desc">Projeto educativo sobre deepfakes, IA e desinformação. Desenvolvido para a comunidade escolar.</p>
+          <p class="footer-tag">#cidadaniadigital2026</p>
+        </div>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="#deepfakes">O que são Deepfakes</a></li>
+            <li><a href="#fake-news">Fake News e IA</a></li>
+            <li><a href="#identificar">Como Identificar</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#praticas">Boas Práticas</a></li>
+          </ul>
+        </nav>
+        <div class="footer-resources">
+          <h3>Fontes e Referências</h3>
+          <ul>
+            <li><a href="https://aosfatos.org" target="_blank" rel="noopener noreferrer">Aos Fatos</a></li>
+            <li><a href="https://lupa.uol.com.br" target="_blank" rel="noopener noreferrer">Agência Lupa</a></li>
+            <li><a href="https://www.safernet.org.br" target="_blank" rel="noopener noreferrer">SaferNet Brasil</a></li>
+            <li><a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">ANPD — Proteção de Dados</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Desenvolvido com HTML5, CSS3 e JavaScript puro · Projeto Escolar 2026</p>
+        <p class="footer-note">Conteúdo elaborado com apoio de IA (prompts documentados no README.md do repositório)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
