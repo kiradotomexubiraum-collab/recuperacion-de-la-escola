@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -391,7 +391,7 @@
 
             <div class="form-group">
               <label for="tipoConteudo">Tipo de conteúdo suspeito <span aria-hidden="true">*</span></label>
-              <select id="tipoConteudo" name="tipoConteudo" required aria-required="true" aria-describedby="tipoError">
+              <select id="tipoConteudo" name="tipoConteudo" required aria-required="true" aria-describedby="tipoConteudoError">
                 <option value="">Selecione uma opção...</option>
                 <option value="video">Vídeo deepfake</option>
                 <option value="imagem">Imagem manipulada</option>
@@ -400,7 +400,7 @@
                 <option value="perfil">Perfil falso em rede social</option>
                 <option value="outro">Outro</option>
               </select>
-              <span class="form-error" id="tipoError" role="alert" aria-live="assertive"></span>
+              <span class="form-error" id="tipoConteudoError" role="alert" aria-live="assertive"></span>
             </div>
 
             <div class="form-group">
